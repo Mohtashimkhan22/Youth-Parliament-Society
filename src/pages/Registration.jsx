@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { db } from '../firebase';
+import { collection, addDoc } from 'firebase/firestore';
 
 const Registration = () => {
   const [form, setForm] = useState({
@@ -13,11 +15,16 @@ const Registration = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle submission logic here (e.g., API call)
-    alert('Registration submitted successfully!');
-    console.log(form);
+    try {
+      await addDoc(collection(db, 'registrations'), form);
+      alert('Registration submitted successfully!');
+      setForm({ name: '', email: '', phone: '', college: '', message: '' });
+    } catch (error) {
+      console.error('Error submitting registration:', error);
+      alert('Submission failed. Please try again.');
+    }
   };
 
   return (
