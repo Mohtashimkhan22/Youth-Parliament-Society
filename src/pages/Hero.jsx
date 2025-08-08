@@ -1,6 +1,7 @@
 import React from 'react';
 import bgImage from '../assets/graphicEra.jpeg';
 import logo from '../assets/geu-small-logo.png';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -23,12 +24,9 @@ const Hero = () => {
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="./register"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-red-600 hover:bg-red-500 rounded-md transition duration-200"
-            >
+            <Link to="register" className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-red-600 hover:bg-red-500 rounded-md transition duration-200">
               Join the Movement
-            </a>
+            </Link>
             <a
               href="#about"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-red-700 bg-white hover:bg-gray-100 rounded-md transition duration-200"
