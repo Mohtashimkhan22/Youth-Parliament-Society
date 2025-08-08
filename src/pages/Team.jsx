@@ -11,6 +11,7 @@ import image9 from "../assets/image9.png";
 import image10 from "../assets/image10.png";
 import image11 from "../assets/image11.png";
 import image12 from "../assets/image12.png";
+import Header from './Header';
       
 
 const teamMembers = [
@@ -78,6 +79,8 @@ const teamMembers = [
 
 const Team = () => {
   return (
+    <>
+    <Header/>
     <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center mb-12">
         <h2 className="text-indigo-600 font-semibold uppercase tracking-wide text-sm">Our Team</h2>
@@ -104,6 +107,7 @@ const Team = () => {
         ))}
       </div>
     </section>
+    </>
   );
 };
 

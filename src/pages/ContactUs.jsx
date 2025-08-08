@@ -1,8 +1,11 @@
 import React from 'react';
+import Header from './Header';
 
 const ContactUs = () => {
   return (
-    <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
+    <>
+     <Header/>
+      <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Contact Us</h2>
@@ -63,6 +66,8 @@ const ContactUs = () => {
         </form>
       </div>
     </section>
+    </>
+    
   );
 };
 

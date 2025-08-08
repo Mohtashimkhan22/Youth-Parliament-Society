@@ -1,8 +1,11 @@
 import React from 'react';
+import Header from './Header';
 
 const AboutUs = () => {
   return (
-    <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
+    <>
+    <Header/>
+      <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
         {/* Image Section */}
         <div className="md:w-1/2 mb-10 md:mb-0">
@@ -35,6 +38,8 @@ const AboutUs = () => {
         </div>
       </div>
     </section>
+    </>
+    
   );
 };
 
