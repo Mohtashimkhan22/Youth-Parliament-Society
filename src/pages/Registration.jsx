@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { db } from '../firebase';
 import { collection, addDoc } from 'firebase/firestore';
+import Header from './Header';
 
 const Registration = () => {
   const [form, setForm] = useState({
@@ -28,6 +29,8 @@ const Registration = () => {
   };
 
   return (
+    <>
+    <Header/>
     <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-10">
@@ -110,6 +113,7 @@ const Registration = () => {
         </form>
       </div>
     </section>
+    </>
   );
 };
 
